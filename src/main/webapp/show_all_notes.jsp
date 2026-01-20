@@ -6,6 +6,7 @@
 <%@page import="com.helper.FactoryProvider"%>
 <%@page import="org.hibernate.query.Query"%>
 <%@page import="org.hibernate.Session"%>
+<%@ page import="javax.smartcardio.Card" %>
 
 <html lang="en">
   <head>
@@ -35,8 +36,8 @@
 		%>
 		
 			<div class="col-md-4">
-				<div class="card show-card my-2 text-center" >
-				  <img src="./uploads/default.png" class="card-img-top" style="object-fit: cover;" alt="Card Image">
+				<div class="card show-card my-2 text-center h-100" >
+				  <img src="./uploads/<%= note.getImage()%>" class="card-img-top" style="object-fit: cover; border-radius: inherit; width: 100%; height: 60%;" alt="Card Image">
 				  <div class="card-body">
 				    <h5 class="card-title"><%= note.getTitle() %></h5>
 				    <h6 class="text-muted"><%= note.getAddedDate() %></h6>

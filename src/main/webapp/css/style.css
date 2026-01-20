@@ -32,12 +32,12 @@ body{
 	z-index:-1;
 }
 
-#create-note-card{
+#create-note-card, #update-card{
 	border-radius: 20px;
 	position: relative;
 }
 
-#create-note-card::before{
+#create-note-card::before, #update-card::before{
 	content: "";
 	position: absolute;
 	inset: -8px;

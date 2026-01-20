@@ -26,8 +26,8 @@
   	<div class="container my-4 ">		
 		<div class="row">
 		
-		<div class="card col-md-6 offset-md-3">
-			<div class="card-header text-center"><h1>Update Note</h1></div>
+		<div class="card col-md-6 offset-md-3 mt-5" id="update-card">
+			<div class="card-header text-center bg-transparent border-0" ><h1>Update Note</h1></div>
 			<div class="card-body">
 		
 				<form action="UpdateServlet" method="post" enctype="multipart/form-data">

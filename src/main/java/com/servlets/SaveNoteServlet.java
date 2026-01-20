@@ -52,10 +52,12 @@ public class SaveNoteServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		// Making the folder "upload" where the images will be stored.
+		// Making the folder "uploads" where the images will be stored.
 		
 		String uploadPath=getServletContext().getRealPath("")+File.separator+"uploads";
+
 		File uploadDir=new File(uploadPath);
+
 		if(!uploadDir.exists())
 		{
 			uploadDir.mkdir();
@@ -65,9 +67,12 @@ public class SaveNoteServlet extends HttpServlet {
 		String submittedFileName=null;
 		
 		try {
+			//
 			Part filePart=request.getPart("image");
+
+			// filePart.getSubmittedFileName() return ""(empty string) , not null if ther is not image provided.
 			submittedFileName=filePart.getSubmittedFileName();
-			
+
 			if (submittedFileName != null && !submittedFileName.isEmpty())
 			{
 				String saveFilePath= uploadPath+File.separator+submittedFileName;
@@ -81,21 +86,17 @@ public class SaveNoteServlet extends HttpServlet {
 			System.out.println("Image not got saved!!"+e.getMessage());
 		}
 		
-		
-		
 		Note note = new Note();
 		note.setTitle(title);
 		note.setContent(content);
 		note.setAddedDate(new Date());
-		if(submittedFileName!=null)
+
+		if(submittedFileName!=null && !submittedFileName.isEmpty())
 		{
 			note.setImage(submittedFileName);
 		}else {
-			note.setImage("default.png");
+			note.setImage("default.svg");
 		}
-		
-		
-		System.out.println(note);
 		
 		Session openSession = FactoryProvider.getFactory().openSession();
 		Transaction tx=openSession.beginTransaction();
