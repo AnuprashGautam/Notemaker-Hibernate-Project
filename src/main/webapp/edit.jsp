@@ -9,7 +9,7 @@
     <title>NoteTaker: Home Page</title>
     <%@ include file="all_css_js.jsp" %>
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
   	<%@ include file="navbar.jsp" %>

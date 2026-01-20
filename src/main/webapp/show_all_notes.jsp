@@ -34,9 +34,9 @@
 			{
 		%>
 		
-			<div class="col-md-6">
-				<div class="card mt-2 text-center">
-				  <img src="C:/Users/anupr/eclipse-workspace-enterprise-edition/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/NoteTaker/uploads/default.png" class="card-img-top" alt="Card Image">
+			<div class="col-md-4">
+				<div class="card show-card my-2 text-center" >
+				  <img src="./uploads/default.png" class="card-img-top" style="object-fit: cover;" alt="Card Image">
 				  <div class="card-body">
 				    <h5 class="card-title"><%= note.getTitle() %></h5>
 				    <h6 class="text-muted"><%= note.getAddedDate() %></h6>
@@ -48,7 +48,6 @@
 				  </div>
 				</div>
 			</div>
-			
 		<%
 			}
 			s.close();

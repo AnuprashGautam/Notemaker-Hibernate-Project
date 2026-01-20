@@ -6,7 +6,7 @@
     <title>NoteTaker: Home Page</title>
     <%@ include file="all_css_js.jsp" %>
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
   	<%@ include file="navbar.jsp" %>
@@ -14,7 +14,7 @@
 	<div class="container my-4 ">		
 		<div class="row">
 		
-		<div class="card col-md-6 offset-md-3 mt-5">
+		<div class="card col-md-6 offset-md-3 mt-5" id="create-note-card">
 			<div class="card-body">
 				<div class="container text-center"><h1>Create Note</h1></div>
 				<form action="SaveNoteServlet" method="post" enctype="multipart/form-data">
